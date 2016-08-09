@@ -1,6 +1,10 @@
 #!/bin/bash
 
 # Ensure expect package is installed
+if [[ -z `command -v expect` ]]; then
+        echo "Expect command is not installed!!!"; exit 1;
+fi
+
 # Sample interaction mode script
 cat <<'EOF'> /tmp/hello-world
 #!/bin/bash
